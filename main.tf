@@ -1,17 +1,14 @@
 locals {
-  labName = "azurelaboratory"
+  labName             = "azurelaboratory"
+  resource_group_name = "rg-${local.labName}-external-dns"
   tags = {
     environment = "production"
     purpose     = "azurelaboratory-external-dns"
   }
 }
 
-# resource "azurerm_resource_group" "this" {
-#   location = var.location
-#   name     = var.resource_group_name
-#   tags     = local.tags
-# }
-
-data "azurerm_resource_group" "this" {
-  name = var.resource_group_name
+resource "azurerm_resource_group" "this" {
+  location = var.location
+  name     = var.resource_group_name
+  tags     = local.tags
 }

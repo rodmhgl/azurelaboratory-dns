@@ -16,7 +16,7 @@ variable "tags" {
 
 variable "a_records" {
   type        = map(any)
-  description = "Map of CNAME records to be created in the DNS zone."
+  description = "Map of A records to be created in the DNS zone."
   default     = {}
 }
 

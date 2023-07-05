@@ -36,6 +36,7 @@ jobs:
         run: terraform fmt -check -recursive
 
       # Perform a security scan of the terraform code using checkov
+      # TODO: How to exclude example directories?
       - name: Run Checkov action
         id: checkov
         uses: bridgecrewio/checkov-action@master

@@ -1,3 +1,9 @@
+variable "resource_group_name" {
+  description = "The name of the Azure Resource Group in which all resources in this example should be created."
+  type        = string
+  default     = "rg-azurelaboratory-external-dns"
+}
+
 variable "location" {
   description = "The Azure Region in which all non-global resources in this example should be created."
   type        = string

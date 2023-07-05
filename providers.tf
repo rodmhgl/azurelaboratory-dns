@@ -12,8 +12,8 @@ terraform {
     storage_account_name = "tfstate6982"
     container_name       = "tfstate"
     key                  = "prod/public_dns.tfstate"
-    use_azuread_auth     = true # ARM_USE_AZUREAD
-    use_oidc             = true # ARM_USE_OIDC
+    # use_azuread_auth     = true # ARM_USE_AZUREAD
+    use_oidc = true # ARM_USE_OIDC
   }
 }
 

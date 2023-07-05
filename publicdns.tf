@@ -70,3 +70,12 @@ module "returnsnulldotcom" {
   }
   tags = local.tags
 }
+
+module "awkwardweirdterribleandbaddotcom" {
+  source              = "./modules/publicdns"
+  zone_name           = "awkwardweirdterribleandbad.com"
+  resource_group_name = azurerm_resource_group.this.name
+  a_records           = {}
+  cname_records       = {}
+  tags                = local.tags
+}

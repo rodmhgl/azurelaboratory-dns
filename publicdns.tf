@@ -75,7 +75,12 @@ module "awkwardweirdterribleandbaddotcom" {
   source              = "./modules/publicdns"
   zone_name           = "awkwardweirdterribleandbad.com"
   resource_group_name = azurerm_resource_group.this.name
-  a_records           = {}
-  cname_records       = {}
-  tags                = local.tags
+  a_records = {
+    "twilio" = {
+      ttl     = 3600
+      records = [var.twilioIPAddress, ]
+    }
+  }
+  cname_records = {}
+  tags          = local.tags
 }

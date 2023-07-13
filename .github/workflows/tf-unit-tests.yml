@@ -38,6 +38,7 @@ jobs:
       # Perform a security scan of the terraform code using checkov
       # TODO: How to exclude example directories?
       - name: Run Checkov action
+        if: success() || failure()
         id: checkov
         uses: bridgecrewio/checkov-action@master
         with:

@@ -7,11 +7,12 @@ terraform {
     }
   }
   backend "azurerm" {
-    resource_group_name  = "tfstate"
-    storage_account_name = "tfstate6982"
+    resource_group_name  = "tfstate-rg"
+    storage_account_name = "tfstatelab"
     container_name       = "tfstate"
     key                  = "prod/public_dns.tfstate"
     use_oidc             = true
+    use_azuread_auth     = true
   }
 }
 

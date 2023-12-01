@@ -12,6 +12,7 @@ terraform {
     container_name       = "tfstate"
     key                  = "prod/public_dns.tfstate"
     use_oidc             = true
+    use_azuread_auth     = true
   }
 }
 

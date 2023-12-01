@@ -4,6 +4,7 @@ locals {
   tags = {
     environment = "production"
     purpose     = "azurelaboratory-external-dns"
+    Billing     = "external_dns"
   }
 }
 
